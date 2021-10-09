@@ -11,7 +11,7 @@ def process(path_file, instance):
     }
     for index in range(len(instance)):
         if instance.search(index)["nome_do_arquivo"] == path_file:
-            return False
+            return sys.stdout.write("Arquivo repetido")
     instance.enqueue(result)
     return sys.stdout.write(f"{result}")
 
