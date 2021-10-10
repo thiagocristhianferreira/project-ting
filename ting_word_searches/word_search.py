@@ -4,10 +4,10 @@ def exists_word(word, instance):
         get_file = instance.search(index_file)
         add_or_no = False
         lines = list()
-        for index_row, row in enumerate(get_file['linhas_do_arquivo']):
-            if word.lower() in row.lower():
+        for index_line, line in enumerate(get_file['linhas_do_arquivo']):
+            if word.lower() in line.lower():
                 add_or_no = True
-                lines.append({'linha': index_row + 1})
+                lines.append({'linha': index_line + 1})
 
         if add_or_no:
             result.append({
